@@ -1,0 +1,46 @@
+[
+  {
+    "entity": "orders",
+    "path": "input/olist/olist_orders_dataset.csv",
+    "keys": ["order_id"]
+  },
+  {
+    "entity": "order_items",
+    "path": "input/olist/olist_order_items_dataset.csv",
+    "keys": ["order_id"]
+  },
+  {
+    "entity": "order_payments",
+    "path": "input/olist/olist_order_payments_dataset.csv",
+    "keys": ["order_id"]
+  },
+  {
+    "entity": "order_reviews",
+    "path": "input/olist/olist_order_reviews_dataset.csv",
+    "keys": ["review_id"]
+  },
+  {
+    "entity": "products",
+    "path": "input/olist/olist_products_dataset.csv",
+    "keys": ["product_id"]
+  },
+  {
+    "entity": "customers",
+    "path": "input/olist/olist_customers_dataset.csv",
+    "keys": ["customer_id"]
+  },
+  {
+    "entity": "sellers",
+    "path": "input/olist/olist_sellers_dataset.csv",
+    "keys": ["seller_id"]
+  },
+  {
+    "entity": "geolocation",
+    "path": "input/olist/olist_geolocation_dataset.csv"
+  },
+  {
+    "entity": "product_category_translation",
+    "path": "input/olist/product_category_name_translation.csv",
+    "keys": ["product_category_name"]
+  }
+]

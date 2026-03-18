@@ -1,0 +1,32 @@
+default_environment: dev
+project_id: 019cf07a-8a62-7a94-8e52-0d9ca2e52650
+
+environments:
+- name: dev
+- name: staging
+- name: prod
+
+plugins:
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      csv_files_definition: files_definitions/olist_files.json
+    select:
+    - '!.*'
+    - orders.*
+    - order_items.*
+    - order_payments.*
+
+
+
+  loaders:
+  - name: target-bigquery
+    variant: z3z1ma
+    pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+    config:
+      project: ${GCP_PROJECT_ID}
+      dataset: ${BQ_RAW_DATASET}
+      location: ${GCP_REGION}
+      max_batch_age: 30
