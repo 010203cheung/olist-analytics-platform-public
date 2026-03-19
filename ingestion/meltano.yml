@@ -13,6 +13,18 @@ plugins:
     pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
     config:
       csv_files_definition: files_definitions/olist_files.json
+  # select:
+  #  - '!.*'
+  #  - customers.*
+  #  - sellers.*
+  #  - product_category_translation.*
+
+  # select:
+  # - '!.*'
+  # - products.*
+  # - geolocation.*
+  # - order_reviews.*
+
     select:
     - '!.*'
     - orders.*
